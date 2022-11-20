@@ -5,12 +5,32 @@ function Counter() {
     const [count,setCount]=useState(0)
     const [txt,setTxt]=useState('')
     const inc=()=>{
+      if((count+1)%2!=0){
+        setObj({msg:"It's odd"})
+      }
+      else{
+        setObj({msg:"It's even"})
+      }
       setCount(count+1)
     }
     const dec=()=>{
-      setCount(count-1)
+      if(count>0){
+        if((count-1)%2!=0){
+          setObj({msg:"It's odd"})
+        }
+        else{
+          setObj({msg:"It's even"})
+        }
+      setCount(count-1)}
+      else{
+        setObj({msg:"Don't go to negative side"})
+      }
     }
-    const [obj,setObj]=useState({msg:"Mukul"})
+    const [obj,setObj]=useState({msg:"It's even"})
+
+    // const obj={msg:"It's odd"}
+    // const obj={msg:"It's even"}
+
     useEffect(()=>{
       console.log("Radhe")
     },[count])
