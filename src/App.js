@@ -8,6 +8,7 @@ function App() {
   return (
     <Context.Provider value={theme} >
       <button onClick={()=>setTheme(!theme)}>Change Theme</button>
+      <h3>For setting theme I've used context api</h3>
 
       
         <Counter/>
