@@ -1,7 +1,9 @@
 import React from 'react'
-import {useState,useEffect} from 'react'
-
+import {useState,useEffect,useContext} from 'react'
+import Context from './Context'
 function Counter() {
+  const theme=useContext(Context)
+  // console.log(theme)
     const [count,setCount]=useState(0)
     const [txt,setTxt]=useState('')
     const inc=()=>{
@@ -28,22 +30,19 @@ function Counter() {
     }
     const [obj,setObj]=useState({msg:"It's even"})
 
-    // const obj={msg:"It's odd"}
-    // const obj={msg:"It's even"}
-
     useEffect(()=>{
       console.log("Radhe")
     },[count])
     console.log("render")
     
   return (
-    <div>
+    <div className={theme?"dark":"light"}>
 
     <div>Counter {count} </div> 
     
     <button onClick={inc}>+1</button>
     <button onClick={dec}>-1</button>
-    <h1>{obj.msg}</h1>
+    <h4>{obj.msg}</h4>
     <input type="text" value={txt} onChange={(e)=>setTxt(e.target.value)}/>
     
     
