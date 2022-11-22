@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Counter from './components/Counter';
 import Context from './components/Context';
+import Bat from './components/Bat';
 
 function App() {
   const [theme,setTheme]=useState(false)
@@ -12,6 +13,7 @@ function App() {
 
       
         <Counter/>
+        <Bat/>
         
       
     </Context.Provider>
