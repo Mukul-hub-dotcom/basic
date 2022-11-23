@@ -5,6 +5,7 @@ import Context from './components/Context';
 import Bat from './components/Bat';
 import {Provider} from 'react-redux'
 import store from './redux/store';
+import Ball from './components/Ball';
 function App() {
   const [theme,setTheme]=useState(false)
   return (
@@ -15,7 +16,7 @@ function App() {
 
       
          <Counter/>
-         <Bat/>
+         
         
       
      </Context.Provider> */}
@@ -24,6 +25,7 @@ function App() {
       <h2>Done with redux</h2>
 
 <Bat/>
+<Ball/>
     </Provider>
     </div>
   );
