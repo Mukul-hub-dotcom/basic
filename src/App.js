@@ -6,6 +6,7 @@ import Bat from './components/Bat';
 import {Provider} from 'react-redux'
 import store from './redux/store';
 import Ball from './components/Ball';
+import User from './components/User';
 function App() {
   const [theme,setTheme]=useState(false)
   return (
@@ -26,7 +27,10 @@ function App() {
 
 <Bat/>
 <Ball/>
+
     </Provider>
+    <User/>
+    
     </div>
   );
 }
