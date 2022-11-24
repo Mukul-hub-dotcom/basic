@@ -14,7 +14,7 @@ const User = () => {
                 // console.log(data.users)
                 setLoading(false)
             } catch (err) {
-                setError(err)
+                setError(err.message)
                 setLoading(false)
             }
         },[]
